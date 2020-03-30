@@ -1,12 +1,20 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: Deploy to Neocities
+description: Deploys a folder to Neocities using its Ruby CLI
+author: Jonathan Chang
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  key:
+    description: Neocities API token
+    required: true
+  dir:
+    description: Local directory to deploy
+    required: true
+  clean:
+    description: Also delete remote files that don't exist locally
+    default: false
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.key }}
+    - ${{ inputs.dir }}
+    - ${{ inputs.clean }}

@@ -1,5 +1,22 @@
-# Container Action Template
+# Deploy to Neocities
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+An action that deploys a local directory from a workflow to Neocities.
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+## Usage
+
+```yaml
+
+- name: Deploy to Neocities
+  # Don't use master in production, use a SHA1 hash, e.g.,
+  # jonchang/deploy-neocities@deadbeef
+  uses: jonchang/deploy-neocities@master
+  with:
+    # From https://neocities.org/settings
+    # Set in Settings -> Secrets
+    key: ${{ secrets.NEOCITIES_API_KEY }}
+    # Must be visible in Docker container
+    # See https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners#docker-container-filesystem
+    dir: _site
+    # Optional, will delete remote files not present locally
+    clean: false
+```

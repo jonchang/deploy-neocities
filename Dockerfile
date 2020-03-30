@@ -1,6 +1,6 @@
-FROM alpine:3.10
+FROM ruby:slim
 
-COPY LICENSE README.md /
+RUN gem install --no-document neocities
 
 COPY entrypoint.sh /entrypoint.sh
 
