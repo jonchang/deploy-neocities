@@ -1,6 +1,9 @@
 name: Deploy to Neocities
 description: Deploys a folder to Neocities using its Ruby CLI
 author: Jonathan Chang
+branding:
+  icon: arrow-up-circle
+  color: orange
 inputs: 
   key:
     description: Neocities API token
