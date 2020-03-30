@@ -23,3 +23,4 @@ An action that deploys a local directory from a workflow to Neocities.
 ## See also
 
 * [bcomnes/deploy-to-neocities](https://github.com/bcomnes/deploy-to-neocities), Node.js action with fancier diffing algorithm
+* [neocities/neocities-ruby](https://github.com/neocities/neocities-ruby), the Ruby gem this is based on
