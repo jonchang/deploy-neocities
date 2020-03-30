@@ -20,6 +20,10 @@ An action that deploys a local directory from a workflow to Neocities.
     clean: false
 ```
 
+## Caveats
+
+* Can be slow for large sites.
+
 ## See also
 
 * [bcomnes/deploy-to-neocities](https://github.com/bcomnes/deploy-to-neocities), Node.js action with fancier diffing algorithm
