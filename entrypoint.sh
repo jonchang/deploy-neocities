@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-set -e
+set -eux
 
 if [ "$#" -ne 3 ]; then
   echo "Usage: API_KEY DIRECTORY CLEANUP" >&2
