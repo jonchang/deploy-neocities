@@ -20,7 +20,9 @@ cd "$2"
 neocities push .
 
 if [ "$3" = "true" ]; then
-  comm -2 -3 <(TERM=dumb neocities list -a | sort) <(find . | cut -c3- | sort) > /tmp/remove.txt
+  TERM=dumb neocities list -a | sort > /tmp/theirs.txt
+  find . | cut -c3- | sort > /tmp/ours.txt
+  comm -2 -3 /tmp/theirs.txt /tmp/ours.txt > /tmp/remove.txt
   if [ -s /tmp/remove.txt ]; then
     cat /tmp/remove.txt | xargs neocities delete
   fi
