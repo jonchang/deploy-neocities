@@ -2,7 +2,18 @@
 
 set -e
 
+if [ "$#" -ne 3 ]; then
+  echo "Usage: API_KEY DIRECTORY CLEANUP" >&2
+  exit 1
+fi
+
+if ! [ -d "$2" ]; then
+  echo "$2 not found" >&2
+  exit 1
+fi
+
 export NEOCITIES_API_KEY="$1"
+export PATH=/usr/local/bundle/bin:$PATH
 
 cd "$2"
 
