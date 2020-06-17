@@ -1,4 +1,4 @@
-name: Deploy to Neocities
+name: Deploy to Neocities using Ruby CLI
 description: Deploys a folder to Neocities using its Ruby CLI
 author: Jonathan Chang
 branding:
