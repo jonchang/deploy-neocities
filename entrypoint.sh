@@ -17,13 +17,13 @@ export PATH=/usr/local/bundle/bin:$PATH
 
 cd "$2"
 
-neocities push .
+bundle exec neocities push .
 
 if [ "$3" = "true" ]; then
   TERM=dumb neocities list -a | sort > /tmp/theirs.txt
   find . | cut -c3- | sort > /tmp/ours.txt
   comm -2 -3 /tmp/theirs.txt /tmp/ours.txt > /tmp/remove.txt
   if [ -s /tmp/remove.txt ]; then
-    cat /tmp/remove.txt | xargs neocities delete
+    cat /tmp/remove.txt | bundle exec xargs neocities delete
   fi
 fi
