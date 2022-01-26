@@ -28,3 +28,4 @@ An action that deploys a local directory from a workflow to Neocities.
 
 * [bcomnes/deploy-to-neocities](https://github.com/bcomnes/deploy-to-neocities), Node.js action with fancier diffing algorithm
 * [neocities/neocities-ruby](https://github.com/neocities/neocities-ruby), the Ruby gem this is based on
+* [A blog post on how to use this Action](https://jonathanchang.org/blog/deploying-your-static-site-to-neocities-using-github-actions/) and a brief explanation for why this exists in the first place
