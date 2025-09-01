@@ -1,6 +1,6 @@
-FROM ruby:2-alpine
+FROM ruby:3
 
-RUN gem install --no-document neocities
+RUN gem install --verbose --no-document neocities
 
 COPY entrypoint.sh /entrypoint.sh
 
